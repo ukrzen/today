@@ -2,7 +2,7 @@ $(function(){
     var today = new Date();
     var months=" січня лютого березня квітня травня червня липня серпня вересня жовтня листопада грудня".split(" ");
     var month =today.getMonth() + 1;
-    var day =today.getDate()+3;
+    var day =today.getDate();
     $(".date .month").text(months[month]);
     $(".date .day").text(day);
     var AUTUMN_URLS=["https://lh3.googleusercontent.com/Zl8Fo-vMumjS5hu7PSDffpZ2a3RnsBpT926pgaxBsK4=w547-h364-no",
