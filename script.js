@@ -24,7 +24,7 @@ $(function () {
         var day = date.getDate();
         $(".date .month").text(months[month]);
         $(".date .day").text(day);
-
+        $(".background").removeClass("ready");
         $.get("days/" + month + "/" + day + ".json", function (h) {
             var imageUrl = h.imageUrl;
             if (!imageUrl) {
