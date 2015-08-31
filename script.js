@@ -1,8 +1,8 @@
 $(function(){
     var today = new Date();
     var months=" січня лютого березня квітня травня червня липня серпня вересня жовтня листопада грудня".split(" ");
-    var month =9;// today.getMonth() + 2;
-    var day =19;// today.getDate();
+    var month =today.getMonth() + 1;
+    var day =today.getDate();
     $(".date .month").text(months[month]);
     $(".date .day").text(day);
 
