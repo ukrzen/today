@@ -71,6 +71,43 @@ $(function () {
         delta++;
         showDate(addDays(today,delta));
     });
+    $("body").on('swipeLeft',function(){
+
+        $(".left.scroller:not(.hidden)").click();
+        moveContent(0);
+    });
+    $("body").on('swipeRight',function(){
+
+        $(".right.scroller:not(.hidden)").click();
+        moveContent(0);
+    });
+    var startX= 0;
+    var moveContent=function(delta)
+    {
+        var allowed=true;
+        if(delta > 0)
+        {
+            allowed = $(".left.scroller:not(.hidden)").length!=0;
+        }
+        else
+        {
+            allowed = $(".right.scroller:not(.hidden)").length!=0;
+        }
+        if(allowed)
+        {
+            $(".content").css("-webkit-transform","translateX(" + -delta + "px)");
+        }
+
+    };
+    $("body").on("touchstart",function(e){
+        startX=e.changedTouches[0].pageX;
+    });
+    $("body").on("touchmove",function(e){
+        moveContent(startX- e.changedTouches[0].pageX);
+    });
+    $("body").on("touchend",function(e){
+        moveContent(0);
+    });
 
 
 });

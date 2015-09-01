@@ -19,8 +19,11 @@
     <meta name="twitter:image:src" content="http://today.ukrzen.in.ua/images/logo.png"/>
     <meta name="twitter:domain" content="http://today.ukrzen.in.ua/"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+    <script src="zepto.touch.js"></script>
+
     <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic' rel='stylesheet'
+          type='text/css'>
     <link href='stylesheet.css' rel='stylesheet' type='text/css'>
     <meta name="apple-mobile-web-app-title" content="Що за день такий?">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,73 +32,102 @@
     <link rel="apple-touch-icon" href="logo.png"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <script src="script.js"></script>
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
 </head>
 <body>
-<div class="background-back">
-    <div class="background">
+<div class="content">
+
+
+    <div class="background-back">
+        <div class="background">
+
+        </div>
+        <div class="background-overlay">
+
+
+        </div>
+    </div>
+
+    <div class="date">
+        <div class="day"></div>
+        <div class="month"></div>
+    </div>
+    <table class="info hidden">
+        <tr>
+            <td class="day ukraine" title="Українські свята"></td>
+        </tr>
+        <tr>
+            <td class="day world" title="Міжнародні свята"></td>
+        </tr>
+        <tr>
+            <td class="day orthodox" title="Православні свята"></td>
+        </tr>
+        <tr>
+            <td class="day name" title="Іменини"></td>
+        </tr>
+        <tr>
+            <td class="day kalendar" title="За даними сайту Кален-дар"></td>
+        </tr>
+    </table>
+    <footer>
+        <a href="http://goo.gl/forms/BRjz9Z1SbB">Знайшли помилку?</a>
+        <span id="kalendarAuthor">Використано дані з <a href="http://www.kalen-dar.ru/">Кален-дар</a></span>
+        <span id="imageAuthor"></span> &nbsp; Львів - 2015. <a class='email' href="mailto:h.ukrzen+today@gmail.com"
+                                                               target="_blank"> Михайло</a> <a
+            href="https://twitter.com/ukrzen" target="_blank" class="twitter-follow-button email"
+            data-show-count="false"></a> <a href="https://www.facebook.com/pages/Ukrzen-In-Ua/643709062402196"
+                                            target="_blank" class="fb-button email" data-show-count="false"></a>
+
+
+    </footer>
+    <div class="left scroller">
 
     </div>
-    <div class="background-overlay">
-
+    <div class="right scroller">
 
     </div>
+    <div class="share-buttons">
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_vkontakte_large' displayText='Vkontakte'></span>
+    </div>
+
+
 </div>
-<div class="left scroller">
-
-</div>
-<div class="right scroller">
-
-</div>
-<div class="date">
-    <div class="day"></div>
-    <div class="month"></div>
-</div>
-<table class="info hidden">
-    <tr> <td class="day ukraine" title="Українські свята"></td></tr>
-    <tr ><td class="day world" title="Міжнародні свята"></td></tr>
-    <tr ><td class="day orthodox" title=""></td></tr>
-    <!--<tr ><td class="day name"></td></tr>-->
-    <tr ><td class="day kalendar" title="За даними сайту Кален-дар"></td></tr>
-</table>
-<footer>
-    <span id="kalendarAuthor">Використано дані з <a href="http://www.kalen-dar.ru/">Кален-дар</a></span>
- <span id="imageAuthor"></span>   &nbsp; Львів - 2015.  <a class='email' href="mailto:h.ukrzen+today@gmail.com" target="_blank"> Михайло</a>  <a href="https://twitter.com/ukrzen" target="_blank" class="twitter-follow-button email" data-show-count="false" ></a> <a href="https://www.facebook.com/pages/Ukrzen-In-Ua/643709062402196" target="_blank" class="fb-button email" data-show-count="false" ></a>
-
-
-
-</footer>
-<div class="share-buttons">
-    <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_vkontakte_large' displayText='Vkontakte'></span>
-</div>
-
-
-
 </body>
 </html>
 <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
 <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
 
-        ga('create', 'UA-57748128-5', 'auto', {'allowLinker': true});
-        ga('require', 'linker');
-        ga('require', 'displayfeatures');
+    ga('create', 'UA-57748128-5', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('require', 'displayfeatures');
 
-        ga('send', 'pageview');
-
+    ga('send', 'pageview');
 
 
 </script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "464d90da-aa5d-4761-b8ef-21e1b0bbd8f3", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script type="text/javascript">stLight.options({
+    publisher: "464d90da-aa5d-4761-b8ef-21e1b0bbd8f3",
+    doNotHash: false,
+    doNotCopy: false,
+    hashAddressBar: false
+});</script>
 <!--<div id="fb-root"></div>-->
 <!--<script>(function(d, s, id) {-->
 <!--var js, fjs = d.getElementsByTagName(s)[0];-->

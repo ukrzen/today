@@ -20,13 +20,14 @@ footer
     background:  rgba(255,255,255,0.5);
     background-size: cover;
     background-position: 10% 30%;
-    position: absolute;
+    position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
     z-index: 0;
 
+    min-height: 100vh;
 
     opacity: 0;
 
@@ -57,7 +58,7 @@ footer
 }
 .background-overlay
 {
-    position: absolute;
+    position: fixed;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -209,6 +210,15 @@ footer a:hover
     }
 }
 @media (max-width: 768px) {
+    .background,.background-back
+    {
+        background-position: 50% 50%;
+
+    }
+    .scroller
+    {
+        display: none;
+    }
     .info
     {
         left: 1vw;
@@ -284,7 +294,7 @@ footer a:hover
 .scroller:hover
 {
     opacity: 1;
-    background-color: rgba(239, 243, 244, 0.75);
+    background-color: rgba(239, 243, 244, 0.50);
 }
 .scroller
 {
@@ -295,12 +305,13 @@ footer a:hover
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 48px 48px;
-    opacity: 0.3;
+    opacity: 0.5;
     position: fixed;
     transition: all ease 0.8s;
     -webkit-transition: all ease 0.8s;
     -moz-transition: all ease 0.8s;
 }
+
 .left.scroller
 {
     background-image: url( data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik03LjcwMSwxNC4yNzZsOS41ODYtOS41ODVjMC44NzktMC44NzgsMi4zMTctMC44NzgsMy4xOTUsMGwwLjgwMSwwLjhjMC44NzgsMC44NzcsMC44NzgsMi4zMTYsMCwzLjE5NCAgTDEzLjk2OCwxNmw3LjMxNSw3LjMxNWMwLjg3OCwwLjg3OCwwLjg3OCwyLjMxNywwLDMuMTk0bC0wLjgwMSwwLjhjLTAuODc4LDAuODc5LTIuMzE2LDAuODc5LTMuMTk1LDBsLTkuNTg2LTkuNTg3ICBDNy4yMjksMTcuMjUyLDcuMDIsMTYuNjIsNy4wNTQsMTZDNy4wMiwxNS4zOCw3LjIyOSwxNC43NDgsNy43MDEsMTQuMjc2eiIgZmlsbD0iIzUxNTE1MSIvPjwvc3ZnPg==);
@@ -313,4 +324,9 @@ footer a:hover
 
     right:0px;
 
+}
+.content
+{
+    transition: all ease 1s;
+    -webkit-transition: all ease 1s;
 }
