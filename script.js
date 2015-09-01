@@ -73,19 +73,19 @@ $(function () {
     });
     $(document).on('swipeLeft',function(){
 
-        $(".left.scroller:not(.hidden)").click();
+        $(".right.scroller:not(.hidden)").click();
         moveContent(0);
     });
     $(document).on('swipeRight',function(){
+        $(".left.scroller:not(.hidden)").click();
 
-        $(".right.scroller:not(.hidden)").click();
         moveContent(0);
     });
     var startX= 0;
     var moveContent=function(delta)
     {
         var allowed=true;
-        var el = delta > 0? $(".left.scroller:not(.hidden)") : $(".right.scroller:not(.hidden)")
+        var el = delta < 0? $(".left.scroller:not(.hidden)") : $(".right.scroller:not(.hidden)")
 
         allowed=el.length!=0;
         if(allowed)
