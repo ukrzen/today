@@ -71,12 +71,12 @@ $(function () {
         delta++;
         showDate(addDays(today,delta));
     });
-    $(".content").on('swipeLeft',function(){
+    $(document).on('swipeLeft',function(){
 
         $(".left.scroller:not(.hidden)").click();
         moveContent(0);
     });
-    $(".content").on('swipeRight',function(){
+    $(document).on('swipeRight',function(){
 
         $(".right.scroller:not(.hidden)").click();
         moveContent(0);
