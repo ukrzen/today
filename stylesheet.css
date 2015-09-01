@@ -52,12 +52,12 @@ footer
     width: 100%;
     color: white;
     position: fixed;
-    bottom: 25px;
+    bottom: 18px;
     padding-left: 3px;
     padding-right: 3px;
     text-align: right;
     opacity: 0.6;
-    right:20px;
+    right:50px;
 }
 .background-overlay
 {
