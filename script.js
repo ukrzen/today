@@ -85,17 +85,14 @@ $(function () {
     var moveContent=function(delta)
     {
         var allowed=true;
-        if(delta > 0)
-        {
-            allowed = $(".left.scroller:not(.hidden)").length!=0;
-        }
-        else
-        {
-            allowed = $(".right.scroller:not(.hidden)").length!=0;
-        }
+        var el = delta > 0? $(".left.scroller:not(.hidden)") : $(".right.scroller:not(.hidden)")
+
+        allowed=el.length!=0;
         if(allowed)
         {
+
             $(".content").css("-webkit-transform","translateX(" + -delta + "px)");
+
         }
 
     };
