@@ -89,7 +89,13 @@
             .on('touchmove MSPointerMove pointermove', function(e){
                 if((_isPointerType = isPointerEventType(e, 'move')) &&
                     !isPrimaryTouch(e)) return
-                firstTouch = _isPointerType ? e : e.touches[0]
+
+                firstTouch = _isPointerType ? e : e.touches[0];
+                if(!touch.x1)
+                {
+                    touch.x1 = firstTouch.pageX;
+                    touch.y1 = firstTouch.pageY;
+                }
                 cancelLongTap()
                 touch.x2 = firstTouch.pageX
                 touch.y2 = firstTouch.pageY
