@@ -1,7 +1,9 @@
 body
 {
     font-family: 'Open Sans Condensed','Arial',serif ;
-
+        background-image:url(https://lh3.googleusercontent.com/WWsjn9aGJ8CnYvlfjbyhDs2J6WEAp5uwaLFloGagaHI=w1000-h727-no);
+    background-size: cover;
+    background-position: 10% 30%;
 }
 *
 {
@@ -330,8 +332,8 @@ footer a:hover
 
 }
 
-.content
-{
-    transition: all ease 0.2s;
-    -webkit-transition: all ease 0.2s;
-}
+/*.content*/
+/*{*/
+    /*transition: all ease 0.2s;*/
+    /*-webkit-transition: all ease 0.2s;*/
+/*}*/
