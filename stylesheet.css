@@ -327,6 +327,6 @@ footer a:hover
 }
 .content
 {
-    transition: all ease 1s;
-    -webkit-transition: all ease 1s;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
 }
