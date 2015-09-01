@@ -59,45 +59,48 @@
                 var swipeDirectionFromVelocity =
                     e.velocityX > 1 ? 'Right' : e.velocityX < -1 ? 'Left' : e.velocityY > 1 ? 'Down' : e.velocityY < -1 ? 'Up' : null;
                 if (swipeDirectionFromVelocity) {
-                    touch.el.trigger('swipe')
+                    touch.el.trigger('swipe');
                     touch.el.trigger('swipe'+ swipeDirectionFromVelocity)
                 }
             })
             .on('touchstart MSPointerDown pointerdown', function(e){
                 if((_isPointerType = isPointerEventType(e, 'down')) &&
-                    !isPrimaryTouch(e)) return
-                firstTouch = _isPointerType ? e : e.touches[0]
+                    !isPrimaryTouch(e)) return;
+                firstTouch = _isPointerType ? e : e.touches[0];
                 if (e.touches && e.touches.length === 1 && touch.x2) {
                     // Clear out touch movement data if we have it sticking around
                     // This can occur if touchcancel doesn't fire due to preventDefault, etc.
-                    touch.x2 = undefined
-                    touch.y2 = undefined
+                    touch.x2 = undefined;
+                    touch.y2 = undefined;
                 }
-                now = Date.now()
-                delta = now - (touch.last || now)
+                now = Date.now();
+                delta = now - (touch.last || now);
                 touch.el = $('tagName' in firstTouch.target ?
-                    firstTouch.target : firstTouch.target.parentNode)
-                touchTimeout && clearTimeout(touchTimeout);
+                    firstTouch.target : firstTouch.target.parentNode);
+                if(touchTimeout)
+                    clearTimeout(touchTimeout);
+
                 touch.x1 = firstTouch.pageX;
                 touch.y1 = firstTouch.pageY;
-                if (delta > 0 && delta <= 250) touch.isDoubleTap = true;
+                if (delta > 0 && delta <= 250)
+                    touch.isDoubleTap = true;
                 touch.last = now;
-                longTapTimeout = setTimeout(longTap, longTapDelay)
+                longTapTimeout = setTimeout(longTap, longTapDelay);
                 // adds the current touch contact for IE gesture recognition
                 if (gesture && _isPointerType) gesture.addPointer(e.pointerId);
             })
             .on('touchmove MSPointerMove pointermove', function(e){
                 if((_isPointerType = isPointerEventType(e, 'move')) &&
-                    !isPrimaryTouch(e)) return
+                    !isPrimaryTouch(e)) return;
 
                 firstTouch = _isPointerType ? e : e.touches[0];
 
                 cancelLongTap()
-                touch.x2 = firstTouch.pageX
-                touch.y2 = firstTouch.pageY
+                touch.x2 = firstTouch.pageX;
+                touch.y2 = firstTouch.pageY;
 
-                deltaX += Math.abs(touch.x1 - touch.x2)
-                deltaY += Math.abs(touch.y1 - touch.y2)
+                deltaX += Math.abs(touch.x1 - touch.x2);
+                deltaY += Math.abs(touch.y1 - touch.y2);
             })
             .on('touchend MSPointerUp pointerup', function(e){
                 if((_isPointerType = isPointerEventType(e, 'up')) &&
@@ -157,7 +160,7 @@
 
         // scrolling the window indicates intention of the user
         // to scroll, not tap or swipe, so cancel all ongoing events
-        $(window).on('scroll', cancelAll)
+       // $(window).on('scroll', cancelAll)
     })
 
     ;['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown',
