@@ -1,10 +1,15 @@
 body
 {
     font-family: 'Open Sans Condensed','Arial',serif ;
-        background-image:url(https://lh3.googleusercontent.com/pT__jTJ6PYXHi1__CDh-ajVE8ooXMeivhUxFNbbcDL8=w1680-h1050-no);
+    background-image:url(https://lh3.googleusercontent.com/pT__jTJ6PYXHi1__CDh-ajVE8ooXMeivhUxFNbbcDL8=w1680-h1050-no);
     background-size: cover;
     background-position: 10% 30%;
     -webkit-touch-callout: none;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
 }
 *
 {
