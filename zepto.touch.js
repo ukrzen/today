@@ -111,12 +111,12 @@
                     touch.el && touch.el.trigger('swipe')
                     touch.el && touch.el.trigger('swipe' + (swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)))
                     touch = {}
-                }, 0);
+                }, 100);
                 // normal tap
                 else if ('last' in touch)
                 // don't fire tap when delta position changed by more than 30 pixels,
                 // for instance when moving to a point and back to origin
-                    if (deltaX < 20 && deltaY < 20) {
+                    if (deltaX < 30 && deltaY < 30) {
                         // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
                         // ('tap' fires before 'scroll')
                         tapTimeout = setTimeout(function() {
