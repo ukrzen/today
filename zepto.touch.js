@@ -77,11 +77,11 @@
                 delta = now - (touch.last || now)
                 touch.el = $('tagName' in firstTouch.target ?
                     firstTouch.target : firstTouch.target.parentNode)
-                touchTimeout && clearTimeout(touchTimeout)
-                touch.x1 = firstTouch.pageX
-                touch.y1 = firstTouch.pageY
-                if (delta > 0 && delta <= 250) touch.isDoubleTap = true
-                touch.last = now
+                touchTimeout && clearTimeout(touchTimeout);
+                touch.x1 = firstTouch.pageX;
+                touch.y1 = firstTouch.pageY;
+                if (delta > 0 && delta <= 250) touch.isDoubleTap = true;
+                touch.last = now;
                 longTapTimeout = setTimeout(longTap, longTapDelay)
                 // adds the current touch contact for IE gesture recognition
                 if (gesture && _isPointerType) gesture.addPointer(e.pointerId);
@@ -91,11 +91,7 @@
                     !isPrimaryTouch(e)) return
 
                 firstTouch = _isPointerType ? e : e.touches[0];
-                if(!touch.x1)
-                {
-                    touch.x1 = firstTouch.pageX;
-                    touch.y1 = firstTouch.pageY;
-                }
+
                 cancelLongTap()
                 touch.x2 = firstTouch.pageX
                 touch.y2 = firstTouch.pageY
