@@ -16,6 +16,9 @@ $(function () {
     var random = function (list) {
         return list[Math.floor((Math.random() * list.length))];
     };
+    var twoDigits = function(number){
+        return number < 10? "0" + number : number;
+    };
 
 
     var delta =0;
@@ -40,9 +43,9 @@ $(function () {
                 var text = h.data[type];
                 var el = $(".day." + type);
                 if (text) {
-                    if (type != 'orthodox') {
+
                         text = text.replace(/\./ig, "<br>");
-                    }
+
 
                     text = text.replace(/⊕/ig, "");
                     if (type == 'ukraine' && h.isHoliday ||
@@ -50,6 +53,10 @@ $(function () {
                         isImportant = true;
                     }
 
+                    if(type=='kalendar')
+                    {
+                        text = "<a target='_blank' href='http://www.kalen-dar.ru/calendar/"  +twoDigits(month) + "/" + twoDigits(day) + "'>" + text + "</a>";
+                    }
                     el.html(text);
                 }
 

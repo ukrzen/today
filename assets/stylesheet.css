@@ -308,6 +308,11 @@ footer a:hover
     opacity: 1;
     background-color: rgba(239, 243, 244, 0.50);
 }
+.day a
+{
+    color:#333F4F;
+    text-decoration: none;
+}
 .scroller
 {
     width:48px;
