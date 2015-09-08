@@ -65,8 +65,8 @@ $(function () {
             }
             $(".info.hidden").removeClass("hidden");
         });
-        $(".left.scroller").toggleClass("hidden",delta==-1);
-        $(".right.scroller").toggleClass("hidden",delta==7);
+        $(".left.scroller").toggleClass("hidden",day==1 && month == 8);
+        $(".right.scroller").toggleClass("hidden",day ==31 && month==12);
     };
     showDate(today);
 
