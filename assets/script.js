@@ -70,9 +70,27 @@ $(function () {
         });
         $(".left.scroller").toggleClass("hidden",day==1 && month == 8);
         $(".right.scroller").toggleClass("hidden",day ==31 && month==12);
+        var d = new Date();
+        d.setMonth(month-1);
+        d.setDate(day);
+
+        calendar.setDates(d);
     };
     showDate(today);
+    $(".calendar").on("dateChanged",function(){
+        if($(this).data("startdate"))
+        {
+            showDate(new Date( Date.parse($(this).data("startdate"))));
+            $(".calendar").addClass("hidden");
+        }
 
+    });
+    $(".background-overlay").on("click",function(){
+        $(".calendar").addClass("hidden");
+    });
+    $(".date").on("click",function(){
+        $(".calendar").removeClass("hidden");
+    });
     $(".left.scroller").on("click",function(){
         delta--;
         showDate(addDays(today,delta));

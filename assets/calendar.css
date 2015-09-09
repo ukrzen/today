@@ -1,0 +1,72 @@
+/* @group calendar */
+.calendar
+{
+    position: fixed;
+    left: 50%;
+
+    top:50%;
+
+    width:60vw;
+    height:90vh;
+    margin-top: -45vh;
+    margin-left: -30vw;
+    background-color:rgba(239, 243, 244, 1);
+}
+@media (max-width: 992px) {
+    .calendar
+    {
+        left: 2vw;
+        right:2vw;
+        width:96vw;
+        height:96vh;
+        top:2vh;
+        bottom: 2vh;
+
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+
+    }
+}
+.hidden {display:none !important;}
+.no-visible{visibility: hidden;}
+.noTransition {-webkit-transition:none !important;}
+.calendar {-webkit-user-select:none; max-width:800px; }
+.calButtonBar {overflow:hidden; -webkit-user-select:none; margin:0 0 10px; padding:0;font-size:5vh;}
+.calButtonBar li {width:25%; list-style-type:none; float:left; overflow:hidden; text-align:center;}
+.calPrevious a, .calNext a {display:block; width:48px; height:48px; text-decoration:none; font-weight:bold;}
+.calPrevious a {float:right;}
+.calNext a {float:left;}
+.calButtonBar .calMonth {font-weight:bold;  height: 10vh; padding-top:2px; width:50%; color:#333;}
+.calGrid {position:relative;}
+.calGrid table {border-spacing:0; border-collapse:collapse; width:100%;}
+.turnup, .turndown {position:absolute; top:0; left:0; background-color:#fff;}
+.calGrid tr {    height: 10vh;font-size:5vh;line-height: 10vh;}
+.calGrid th {width:14%; height:24px; color:#333;}
+.calGrid td {width:14%; border:solid 1px #ccc; padding:0;}
+.calGrid td a {display:block; width:100%; text-align:center; color:#444; -webkit-tap-highlight-color:rgba(242, 103, 34, 0.75); text-decoration:none; transition-property:background-color, color; transition-duration:200ms; -webkit-transition-property:background-color, color; -webkit-transition-duration:200ms; -moz-transition-property:background-color, color; -moz-transition-duration:200ms; }
+.calGrid td a.inactive {color:#f1f1f2;}
+.calGrid td a.today {}
+.calGrid td a.startDate, .calGrid td a.endDate {color:#fff; background-color:rgba(242, 103, 34, 0.75);}
+.calGrid td a.betweenDates {background-color:#ccc;}
+.calGrid tr.first td {border-top:none 0;}
+.calGrid tr.last td {border-bottom:none 0;}
+
+/* @group animation */
+.in, .out {-webkit-animation-duration:250ms; -webkit-animation-fill-mode:forwards; -webkit-animation-timing-function:ease-in-out;}
+.in {z-index:10;}
+.out {z-index:0;}
+
+/* @group page turn animation */
+.turnup, .turndown {-webkit-animation-duration:400ms; -webkit-transform-origin: 50% 0%; -webkit-animation-fill-mode:forwards;}
+.turnup {-webkit-animation-name:turnUp;}
+.turndown {-webkit-animation-name:turnDown;}
+@-webkit-keyframes turnUp {
+    from {-webkit-transform:perspective(800) rotateX(0deg); opacity:1; -webkit-animation-timing-function:ease-in;}
+    50% {-webkit-transform:perspective(800) rotateX(45deg); opacity:1;-webkit-animation-timing-function:linear;}
+    to {-webkit-transform:perspective(800) rotateX(90deg); opacity:0;-webkit-animation-timing-function:ease-out;}
+}
+@-webkit-keyframes turnDown {
+    from {-webkit-transform:perspective(800) rotateX(90deg); opacity:0; -webkit-animation-timing-function:ease-in;}
+    50% {-webkit-transform:perspective(800) rotateX(45deg); opacity:1;-webkit-animation-timing-function:linear;}
+    to {-webkit-transform:perspective(800) rotateX(0deg); opacity:1;-webkit-animation-timing-function:ease-out;}
+}
