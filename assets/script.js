@@ -3,7 +3,7 @@ $(function () {
     if(location.hash) {
         var args = location.hash.split("/");
         currentDate.setDate(parseInt(args[2]));
-        currentDate.setMonth(parseInt(args[1]));
+        currentDate.setMonth(parseInt(args[1])-1);
     }
     var today = currentDate;
     var months = " січня лютого березня квітня травня червня липня серпня вересня жовтня листопада грудня".split(" ");
