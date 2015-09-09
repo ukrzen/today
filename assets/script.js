@@ -1,11 +1,12 @@
 $(function () {
     var currentDate = new Date();
+    var today = currentDate;
     if(location.hash) {
         var args = location.hash.split("/");
         currentDate.setDate(parseInt(args[2]));
         currentDate.setMonth(parseInt(args[1])-1);
     }
-    var today = currentDate;
+
     var months = " січня лютого березня квітня травня червня липня серпня вересня жовтня листопада грудня".split(" ");
     var AUTUMN_URLS = ["https://lh3.googleusercontent.com/-98GKcNlTdNA/Ve9kltS7qXI/AAAAAAAAAc8/h79hBVnDN9g/s{width}-Ic42/Autumn_in_Dresden.jpg",
         "https://lh3.googleusercontent.com/-BsY3ZsMKkJA/Ve9klmRQZtI/AAAAAAAAAc8/VDBVPPe15fY/s{width}-Ic42/15391727113_3d5348808f_h.jpg",
