@@ -1,7 +1,6 @@
 body
 {
     font-family: 'Open Sans Condensed','Arial',serif ;
-    background-image:url(https://lh3.googleusercontent.com/pT__jTJ6PYXHi1__CDh-ajVE8ooXMeivhUxFNbbcDL8=w1680-h1050-no);
     background-size: cover;
     background-position: 10% 30%;
     -webkit-touch-callout: none;
@@ -218,6 +217,10 @@ footer a:hover
     }
 }
 @media (max-width: 768px) {
+    footer
+    {
+        right:10px !important;
+    }
     .no-mobile
     {
         display: none;
@@ -244,6 +247,7 @@ footer a:hover
         height:20px !important;
         line-height: 20px !important;
 
+
     }
     .stButton .stLarge
     {
@@ -258,12 +262,12 @@ footer a:hover
     }
     .share-buttons
     {
-        left:5px !important;
+        left:10px !important;
     }
     footer, .share-buttons
     {
 
-        bottom: 5px !important;
+        bottom: 10px !important;
     }
     .date
     {
