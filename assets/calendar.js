@@ -167,7 +167,7 @@
 
             extendDate();
             today = (new Date()).clearTime();
-            minDate = today;
+            minDate = new Date(Date.parse("1.8.2015"));
             startDate = $calendar.data("startdate");
             startDate = startDate ? new Date( Date.parse(startDate)).clearTime() : new Date().clearTime();
             endDate = $calendar.data("enddate");
@@ -246,7 +246,7 @@
         }
 
         self.showMonth = function (date) {
-            minDate = new Date(Math.max(minDate, today));
+            minDate =  new Date(Date.parse("1.8.2015"));;
 
             if (!!dateInfo) {
                 $month.text(dateInfo.months.names["long"][date.getMonth()] + " " + date.getFullYear());
