@@ -98,19 +98,21 @@ $(function () {
             $(".info.hidden").removeClass("hidden");
         });
         $(".left.scroller").toggleClass("hidden",day==1 && month == 8);
-        $(".right.scroller").toggleClass("hidden",day ==31 && month==12);
+        $(".right.scroller").toggleClass("hidden",day ==31 && month==1);
         var d = new Date();
         d.setMonth(month-1);
         d.setDate(day);
 
         calendar.setDates(d);
-        ga('send', {
-            'hitType': 'event',          // Required.
-            'eventCategory': 'Main',   // Required.
-            'eventAction':'Look date' ,      // Required.
-            'eventLabel': day + "/" + month,
-            'eventValue': 1
-        });
+        if(ga) {
+            ga('send', {
+                'hitType': 'event',          // Required.
+                'eventCategory': 'Main',   // Required.
+                'eventAction':'Look date' ,      // Required.
+                'eventLabel': day + "/" + month,
+                'eventValue': 1
+            });
+        }
     };
     showDate(currentDate);
     $(".calendar").on("dateChanged",function(){
