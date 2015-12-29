@@ -255,7 +255,7 @@
                 }
             }
             $previous.toggleClass("no-visible",currentMonth.getMonth() == 8);
-            $next.toggleClass("no-visible",currentMonth.getMonth() == 1);
+            $next.toggleClass("no-visible",currentMonth.getMonth() == 0);
 
             var beforeMinDate = minDate > date.clone().moveToLastDayOfMonth();
             var includesToday = !beforeMinDate && (minDate >= date.clone().moveToFirstDayOfMonth());
