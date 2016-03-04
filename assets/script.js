@@ -15,7 +15,12 @@ $(function () {
         "https://lh3.googleusercontent.com/-tPP99Wyj_wE/Ve9kloYKOLI/AAAAAAAAAc8/4TCukX7hxw4/s{width}-Ic42/autumn-leaves-wallpapers-hd.jpg"];
     var WINTER_URLS = ["https://lh3.googleusercontent.com/-I3kk8e6O-SY/VfBh4kod5JI/AAAAAAAAAe0/5eAEJuL_HYs/s{width}-Ic42/winter-fairy-tale-carpathians-ukraine-1.jpg",
         "https://lh3.googleusercontent.com/-SH5FgnMc-44/VfBh44INFpI/AAAAAAAAAe4/uaK_vg6anoQ/s640-Ic42/tumblr_mg43zaN8j71s2vya6o1_1280.jpg"];
-    var SPRING_URLS=[],SUMMER_URLS=[];
+    var SPRING_URLS=[ "https://lh3.googleusercontent.com/-EupjiUAtWQ0/Vtl752JVNJI/AAAAAAAAAj8/jyVwsV-X2EM/s{width}-Ic42/Spring-12.jpg",
+            "https://lh3.googleusercontent.com/-aTCB3cjf_oA/Vtl757ZjDDI/AAAAAAAAAj4/yfV8qgfib5A/s{width}-Ic42/Spring-16.jpg",
+        "https://lh3.googleusercontent.com/-ybdYQ9MsFZo/Vtl757ahY8I/AAAAAAAAAkA/sLI_hHcaxMM/s{width}-Ic42/Spring-3.jpg",
+        "https://lh3.googleusercontent.com/-yop9TlZcpts/Vtl76Xa8peI/AAAAAAAAAkE/_Y7Brk4KTRU/s{width}-Ic42/Spring-8.jpg"
+
+    ],SUMMER_URLS=[];
     var defaultImages = {
         1:WINTER_URLS,2:WINTER_URLS,
         3:SPRING_URLS,4:SPRING_URLS,5:SPRING_URLS,
