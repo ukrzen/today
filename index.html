@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>😌 Ми закрилися</title>
+
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri&subset=cyrillic" rel="stylesheet">
+</head>
+<style>
+    * {
+
+        box-sizing: border-box;
+    }
+    body {
+        margin:0;
+        padding:0;
+        background-color: white;
+        color: white;
+        font-family: 'El Messiri', sans-serif;
+        width:100%;
+        height:100%;
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+        -webkit-transform:translate3d(0,0,0);
+        transform:translate3d(0,0,0);
+        text-align: center;
+        font-size: 100px;
+        font-weight: 100;
+        background: url(assets/bg.jpg) center right;
+        font-size: 3vmin;
+    }
+    footer a {
+        text-decoration:none;
+        color: white;
+    }
+
+    footer {
+
+        color: white;
+        position: fixed;
+        bottom: 25px;
+        padding-left: 3px;
+        padding-right: 3px;
+        text-align: right;
+        font-size:12px;
+        opacity: 0.6;
+        right: 20px;
+    }
+    h2 {
+
+    }
+    @media screen and (min-width: 940px) {
+        .screen{
+            padding-left: 20%;
+            padding-right: 20%;
+
+        }
+    }
+    @media screen and (max-width: 940px){
+        .footer-main
+        {
+            display:none;
+        }
+        
+
+    }
+    @media screen and (max-width: 740px){
+        .s-b
+        {
+            display:none;
+        }
+        footer {
+            display:none;
+        }
+
+
+
+    }
+    @media screen and (orientation: portrait) {
+        .screen
+        {
+            padding-left:2vw;
+            padding-right:2vw;
+
+            font-size:3vh !important;
+        }
+        .screen {
+            font-size: 2vmin;
+        }
+    }
+    body .non-ios
+    {
+        display:none;
+    }
+
+    body:not(.mobile) .ios,body:not(.mobile) .non-ios
+    {
+        display:none;
+    }
+    body.desktop .ios
+    {
+        display:none;
+    }
+    body:not(.ios) .ios
+    {
+        display:none;
+    }
+    body.ios .ios
+    {
+        display:block;
+    }
+    body.mobile:not(.ios) .non-ios
+    {
+        display:block;
+    }
+
+    body.desktop div.desktop
+    {
+        display:block;
+    }
+    body.desktop span.desktop
+    {
+        display:inline;
+    }
+
+    body.mobile .desktop
+    {
+        display:none;
+    }
+    body.desktop .mobile
+    {
+        display:none;
+    }
+    body.mobile div.mobile
+    {
+        display:block;
+    }
+    body.mobile span.mobile
+    {
+        display:inline;
+    }
+    h2
+    {
+        text-align:center;
+    }
+    .screen {
+       position: fixed;
+       left:0;
+        right:0;
+        top:0;
+        bottom:0;
+      
+
+    }
+    .main.screen {
+
+        background: rgba(0,0,0,0.4);
+
+    }
+    a {
+        color: #90ca73 !important;
+    }
+
+
+    .fb {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00NSwxSDVDMi44LDEsMSwyLjgsMSw1djQwYzAsMi4yLDEuOCw0LDQsNGg0MGMyLjIsMCw0LTEuOCw0LTRWNUM0OSwyLjgsNDcuMiwxLDQ1LDF6IiBmaWxsPSIjM0E1QkEwIi8+PHBhdGggZD0iTTMyLDI2bDEtNWwtNSwwdi00YzAtMS41LDAuOC0yLDMtMmgydi01YzAsMC0yLDAtNCwwYy00LjEsMC03LDIuNC03LDd2NGgtNXY1aDV2MTRoNlYyNkgzMnoiIGZpbGw9IiNGRkZGRkYiIGlkPSJmXzFfIi8+PC9zdmc+);
+    }
+    .s-f{
+
+        /*background-color:white;*/
+        display: inline-block !important;
+        width:            48px;
+        height:           48px;
+        background-size: 100% 100%;
+    }
+    .s-i{
+
+        /*background-color:white;*/
+        display: inline-block !important;
+        width:            48px;
+        height:           48px;
+        background-size: 100% 100%;
+    }
+    .is {
+        background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00NSwxSDVDMi44LDEsMSwyLjgsMSw1djQwYzAsMi4yLDEuOCw0LDQsNGg0MGMyLjIsMCw0LTEuOCw0LTRWNUM0OSwyLjgsNDcuMiwxLDQ1LDF6IiBmaWxsPSIjNTI3RkEzIi8+PHBhdGggZD0iTTM2LDEwYzAsMC0yMi41LDAtMjIuNSwwYy0xLjksMC0zLjUsMS42LTMuNSwzLjVsMCwwYzAsMCwwLDIzLDAsMjNjMCwxLjksMS42LDMuNSwzLjUsMy41ICBjMCwwLDIzLDAsMjMsMGMxLjktMC4xLDMuNS0xLjYsMy41LTMuNWMwLDAsMC0yMywwLTIzQzQwLDExLjYsMzcuOSwxMC4xLDM2LDEweiBNMjUsMTkuNWMzLDAsNS41LDIuNSw1LjUsNS41YzAsMy0yLjUsNS41LTUuNSw1LjUgIGMtMywwLTUuNS0yLjUtNS41LTUuNUMxOS41LDIyLDIyLDE5LjUsMjUsMTkuNXogTTM2LDM0YzAsMS4xLTAuOSwyLTIsMmgtOWgtOWMtMS4xLDAtMi0wLjktMi0yVjIyLjVoMi40QzE2LjEsMjMuMywxNiwyNC4xLDE2LDI1ICBjMCw1LDQsOSw5LDlzOS00LDktOWMwLTAuOS0wLjEtMS43LTAuNC0yLjVIMzZWMzR6IE0zNiwxNXYzaDBjMCwwLjUtMC40LDEtMSwxdjBoLTNjLTAuNSwwLTEtMC40LTEtMWgwdi0zaDBjMCwwLDAsMCwwLDAgIGMwLTAuNiwwLjQtMSwxLTFoM3YwQzM1LjYsMTQsMzYsMTQuNSwzNiwxNUMzNiwxNSwzNiwxNSwzNiwxNUwzNiwxNXoiIGZpbGw9IiNGRkZGRkYiIGlkPSJjYW1lcmEiLz48L3N2Zz4=);
+    }
+    .tw {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00NSwxSDVDMi44LDEsMSwyLjgsMSw1djQwYzAsMi4yLDEuOCw0LDQsNGg0MGMyLjIsMCw0LTEuOCw0LTRWNUM0OSwyLjgsNDcuMiwxLDQ1LDF6IiBmaWxsPSIjMkNBN0UwIi8+PHBhdGggZD0iTTQwLDE2LjJjLTEuMSwwLjUtMi44LDEuMS00LDEuM2MxLjMtMC44LDIuNS0yLjYsMy00Yy0xLDAuNi0yLjEsMS40LTMuMiwxLjhMMzUsMTQuNSAgYy0xLjEtMS4yLTIuMi0yLTQtMmMtMy40LDAtNiwyLjYtNiw2YzAsMC40LDAsMC43LDAuMSwxbC0wLjEsMGMtNiwwLTEwLTEuMy0xMy01Yy0wLjUsMC45LTEsMS45LTEsM2MwLDIuMSwxLjMsMy45LDMsNSAgYy0xLDAtMi4yLTAuNS0zLTFjMCwzLDQuMiw2LjQsNyw3Yy0xLDEtNC42LDAuMS01LDBjMC44LDIuNCwzLjMsMy45LDYsNGMtMi4xLDEuNi00LjYsMi41LTcuNSwyLjVjLTAuNSwwLTEsMC0xLjUtMC4xICBjMi43LDEuNyw2LjUsMi42LDEwLDIuNmMxMS4zLDAsMTctOC45LDE3LTE3YzAtMC4zLDAtMC43LDAtMUMzOC4yLDE4LjYsMzkuMiwxNy40LDQwLDE2LjJ6IiBmaWxsPSIjRkZGRkZGIiBpZD0iQnJpZF8xXyIvPjwvc3ZnPg==);
+    }
+    .s-t{
+
+        display: inline-block !important;
+        /*background-color:white;*/
+        width:            48px;
+        height:           48px;
+        background-size: 100% 100%;
+    }
+</style>
+<body class=" desktop">
+<div class="main screen">
+    <h2>Сайту більше не існує ;(</h2>
+    <p>
+        Привіт! Перш за все ми вдячні, що пам'ятаєте про нас через стільки років!
+    </p>
+    <p>Спільнота Ukrzen виникла 7 років тому, як бажання робити цікаві дзенові проекти в україномовному інтернеті.
+       За цей час ми створили низку популярних сайтів, які ширилися в соцмережах і це нас надихало рухатися далі.
+    </p>
+
+    <p>На жаль, ми змушені припинити роботу частини наших проектів через брак часу та можливостей їх підтримувати.</p>
+    <p>Якщо Ви вважаєте, що цей проект потрібно зберегти, клацайте <a href="https://forms.gle/asDzm4eYsHwoJtq46">сюди</a>.</p>
+    <p>А поки підписуйтеся на нас в соцмережах:</p>
+    <a class='s-f fb' title='Facebook'  target="_blank" href="http://www.facebook.com/ukrzeninua/"  ></a>
+    <a class='s-t tw' title='Tweet'  target="_blank" href="http://twitter.com/ukrzen/"></a>
+    <a class='s-i is' title='Instagram'  target="_blank" href=" https://www.instagram.com/ukrzeninua/"></a>
+
+
+</div>
+<footer>
+    <div class="footer-main">
+
+        Львів - 2021 <br><a class="email" href="mailto:h.ukrzen+bandura@gmail.com" target="_blank"> Email</a> <a
+            href="https://twitter.com/ukrzen" target="_blank" class="twitter-follow-button email tw"
+            data-show-count="false"></a> <a href="https://www.facebook.com/ukrzeninua/"
+                                            target="_blank" class="fb-button email fb" data-show-count="false"></a>
+    </div>
+
+</footer>
+</body>
+</html>
