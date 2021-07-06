@@ -20,14 +20,16 @@
         width:100%;
         height:100%;
         width:100vw;
-        height:100vh;
-        overflow:hidden;
+        min-height:100vh;
+
         -webkit-transform:translate3d(0,0,0);
         transform:translate3d(0,0,0);
         text-align: center;
         font-size: 100px;
         font-weight: 100;
-        background: url(assets/bg.jpg) center right;
+        background: url(assets/bg.jpg) center right ;
+        background-attachment: fixed;
+        background-size: cover;
         font-size: 3vmin;
     }
     footer a {
@@ -62,7 +64,7 @@
         {
             display:none;
         }
-        
+
 
     }
     @media screen and (max-width: 740px){
@@ -143,20 +145,17 @@
     h2
     {
         text-align:center;
+        margin:0;
+        padding-top: 1em;
     }
     .screen {
-       position: fixed;
-       left:0;
-        right:0;
-        top:0;
-        bottom:0;
-      
+
 
     }
     .main.screen {
 
         background: rgba(0,0,0,0.4);
-
+        min-height: 100vh;
     }
     a {
         color: #90ca73 !important;
@@ -170,16 +169,16 @@
 
         /*background-color:white;*/
         display: inline-block !important;
-        width:            48px;
-        height:           48px;
+        width:            64px;
+        height:           64px;
         background-size: 100% 100%;
     }
     .s-i{
 
         /*background-color:white;*/
         display: inline-block !important;
-        width:            48px;
-        height:           48px;
+        width:            64px;
+        height:           64px;
         background-size: 100% 100%;
     }
     .is {
@@ -192,14 +191,17 @@
 
         display: inline-block !important;
         /*background-color:white;*/
-        width:            48px;
-        height:           48px;
+        width:            64px;
+        height:           64px;
         background-size: 100% 100%;
+    }
+    .social {
+        padding-bottom: 2em;
     }
 </style>
 <body class=" desktop">
 <div class="main screen">
-    <h2>Сайту більше не існує ;(</h2>
+    <h2>Ми закрилися ;(</h2>
     <p>
         Привіт! Перш за все ми вдячні, що пам'ятаєте про нас через стільки років!
     </p>
@@ -210,10 +212,11 @@
     <p>На жаль, ми змушені припинити роботу частини наших проектів через брак часу та можливостей їх підтримувати.</p>
     <p>Якщо Ви вважаєте, що цей проект потрібно зберегти, клацайте <a href="https://forms.gle/asDzm4eYsHwoJtq46">сюди</a>.</p>
     <p>А поки підписуйтеся на нас в соцмережах:</p>
-    <a class='s-f fb' title='Facebook'  target="_blank" href="http://www.facebook.com/ukrzeninua/"  ></a>
-    <a class='s-t tw' title='Tweet'  target="_blank" href="http://twitter.com/ukrzen/"></a>
-    <a class='s-i is' title='Instagram'  target="_blank" href=" https://www.instagram.com/ukrzeninua/"></a>
-
+    <div class="social">
+        <a class='s-f fb' title='Facebook'  target="_blank" href="http://www.facebook.com/ukrzeninua/"  ></a>
+        <a class='s-t tw' title='Tweet'  target="_blank" href="http://twitter.com/ukrzen/"></a>
+        <a class='s-i is' title='Instagram'  target="_blank" href=" https://www.instagram.com/ukrzeninua/"></a>
+    </div>
 
 </div>
 <footer>
